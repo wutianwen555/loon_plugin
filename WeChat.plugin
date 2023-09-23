@@ -1,0 +1,11 @@
+#!name=微信去广告
+#!desc=微信去广告
+#!icon=https://raw.githubusercontent.com/wutianwen555/loon_plugin/main/icon.png
+#!author=ddgksf2013
+
+[MITM]
+hostname = wxa.wxs.qq.com, mp.weixin.qq.com
+
+[URL Rewrite]
+# > 微信去广告[不包含公众号信息流AD、朋友圈AD]
+^https?:\/\/mp\.weixin\.qq\.com\/mp\/getappmsgad url response-body advertisement response-body ddgksf2013
